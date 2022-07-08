@@ -50,19 +50,19 @@ class CRC:
 		r = self.crc(data,key)
 		size = len(key)
 		print(r)
-		if r == size*0:
+		if r == (size-1)*'0':
 			print("No Error")
 		else:
+            
 			print("Error")
 
 
 
-data = '100100'
-key = '1101'
+data = '00011000'
+key = '10011'
 c = CRC()
 c.encodedData(data,key)
 print('---------------')
 c.reciverSide(c.cdw,key)
 print('---------------')
 print(c.cdw)
-
