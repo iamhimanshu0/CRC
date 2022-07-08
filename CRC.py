@@ -46,7 +46,7 @@ class CRC:
 		print("Remainder: " ,remainder)
 		print("Data: " ,codeword)
 
-	def reciverSide(self,key,data):
+	def reciverSide(self,data,key):
 		r = self.crc(data,key)
 		size = len(key)
 		print(r)
